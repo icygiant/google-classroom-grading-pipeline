@@ -1,0 +1,29 @@
+[project]
+name = "grading-pipeline"
+version = "0.1.0"
+description = "aimed at automating assignment grading (Google Classroom)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.3",
+    "google-api-python-client>=2.195.0",
+    "google-auth-oauthlib>=1.3.1",
+    "google-genai>=1.75.0",
+    "openpyxl>=3.1.5",
+    "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+sync-classroom = "classroom_sync.cli:main"
+grade-submissions = "grade_assignment.cli:main"
+view-grades = "grade_assignment.report:main"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/classroom_sync", "src/grade_assignment"]
