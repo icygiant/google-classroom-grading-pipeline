@@ -79,7 +79,7 @@ crucial: if you chose "external" and your app is in "testing" mode, you must add
 
 `sync-classroom` also accepts the following options:
 
-* `--course-id` - '845870833845' by default (a by-product of me sharing this with a specific user, naturally one would change that for their own personal use)
+* `--course-id` - `'845870833845'` by default (a by-product of me sharing this with a specific user, naturally, one would always change that for their own personal use (or change the default value when forking this project))
 
 * `--staging-dir`, the path where the downloaded files are saved
 
